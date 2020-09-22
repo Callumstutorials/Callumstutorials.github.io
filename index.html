@@ -57,7 +57,7 @@
                                         <li><a href="https://www.youtube.com/channel/UC1w7H7g2gubVdTAWGkqsvOQ?">Youtube<i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="">Newest Video</a></li>
-                                                <li><a href="https://www.youtube.com/watch?v=U1C_svh7Xyw">Other Video</a></li>
+                                                <li><a href="javascript:randomlink()">Other Video</a></li>
                                             </ul>
                                         </li>
 
@@ -270,6 +270,33 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
+     <script>
+        // Random Link Generator
+        
+        // Array with random links is created. You can add as many links as you want/need.
+        
+        /* You can use more than one method to create an array, I will show you two examples */
+        
+        // Condensed Array
+        
+        var random = new Array("http://google.com", "http://yahoo.com", "http://bing.com", "http://cnn.com");
+        
+        // or
+        
+        // Regular Array
+        
+        var random = new Array();
+        
+        random[0] = "http://google.com";
+        random[1] = "http://yahoo.com";
+        random[2] = "http://bing.com";
+        random[3] = "http://cnn.com";
+        
+        function randomlink() {
+        window.location = random[Math.floor(Math.random()*random.length)];
+        }
+        </script>
+        
 </body>
 
 </html>
